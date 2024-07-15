@@ -28,8 +28,6 @@ def recipe_idea(request):
 
   recipe = recipes[0]
 
-  print(recipe['recipe'])
-
   label = recipe['recipe'].get('label')
   image = recipe['recipe'].get('image')
   ingredients = [ing['food'] for ing in recipe['recipe'].get('ingredients', [])]

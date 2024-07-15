@@ -61,6 +61,12 @@ INSTALLED_APPS = [
 ]
 ```
 
+- Run server
+
+```
+python .\manage.py runserver 9000
+```
+
 - Recipe API
 
 ```
