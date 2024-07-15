@@ -16,7 +16,20 @@ def recipe_idea(request):
     }
   response = requests.get(url, params=params)
   data = response.json()
-  return JsonResponse(data)
+
+  recipes = data.get('hits')
+  recipe = recipes[0]
+  label = recipe['recipe'].get('label')
+  image = recipe['recipe'].get('image')
+  ingredients = [ing['food'] for ing in recipe['recipe'].get('ingredients')]
+
+  filtered_data = {
+    'label': label,
+    'image': image,
+    'ingredients': ingredients
+  }
+
+  return JsonResponse(filtered_data)
 
 def ingredient_info(request):
   ingredient = request.GET.get('ingredient', 'apple')
@@ -28,4 +41,13 @@ def ingredient_info(request):
   }
   response = requests.get(url, params=params)
   data = response.json()
-  return JsonResponse(data)
+
+  calories = data.get('calories')
+  health_labels = data.get('healthLabels')
+  
+  filtered_data = {
+    'calories': calories,
+    'healthLabels': health_labels
+  }
+
+  return JsonResponse(filtered_data)

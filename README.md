@@ -60,3 +60,15 @@ INSTALLED_APPS = [
     'api'
 ]
 ```
+
+- Recipe API
+
+```
+http://localhost:8000/api/recipes/?q=chicken
+```
+
+- Ingredient API
+
+```
+http://localhost:8000/api/ingredient/?ingredient=lettuce
+```
