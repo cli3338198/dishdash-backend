@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django local settings
+settings_local.py
+
+# SQLite database file
+*.sqlite3
+
+# Media files (uploads)
+media/
+
+# Static files
+staticfiles/
+
+# Log files
+*.log
+
+# Environment variables file
+.env
+
+# macOS specific files/directories
+.DS_Store
+
+# Windows specific files/directories
+Thumbs.db
+
+# IDE specific files/directories
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+
+# Ignore migrations, they should be managed through `python manage.py makemigrations`
+**/migrations/
+
+# Python virtual environment
+venv/
+
+# Ignore any local development files or directories that should not be shared
+playground/
