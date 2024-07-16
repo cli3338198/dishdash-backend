@@ -56,9 +56,11 @@ def recipe_idea(request):
   # }
 
   # return JsonResponse(filtered_data)
-
-  data = load_recipe('chicken')
-  return JsonResponse(data)
+  try:
+    data = load_recipe('chicken')
+    return JsonResponse(data)
+  except:
+    return JsonResponse({})
 
 def ingredient_info(request):
   query = request.GET.get('ingredient', 'chicken')
@@ -85,5 +87,9 @@ def ingredient_info(request):
 
   # return JsonResponse(filtered_data)
   ingredient = unquote(query)
-  data = load_ingredient(ingredient)
-  return JsonResponse(data)
+
+  try:
+    data = load_ingredient(ingredient)
+    return JsonResponse(data)
+  except:
+    return JsonResponse({})
