@@ -1,3 +1,10 @@
+# DishDash Backend
+
+- A demo app for practicing Django and deploying to Amazon EC2.
+- An API that returns a recipe and information on the ingredients.
+
+## Django/Python Notes & Commands
+
 - Create a virtual environment
 
 ```
@@ -67,14 +74,21 @@ INSTALLED_APPS = [
 python .\manage.py runserver 9000
 ```
 
-- Recipe API
+## Endpoints
 
 ```
-http://localhost:8000/api/recipes/?q=chicken
-```
-
-- Ingredient API
+http://localhost:<PORT NUMBER>/api/hello
 
 ```
-http://localhost:8000/api/ingredient/?ingredient=lettuce
+
+```
+
+http://localhost:<PORT NUMBER>/api/recipes/?q=chicken
+
+```
+
+```
+
+http://localhost:<PORT NUMBER>/api/ingredient/?ingredient=lettuce
+
 ```
